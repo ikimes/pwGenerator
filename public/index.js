@@ -27,7 +27,7 @@ function buildGeneratedPasswords(passwords) {
     passwords.forEach(password => {
        outHTML+= `
         <div class="basis-1/2 flex">
-          <button onclick="copyToClipboard('${password}')" class="w-full m-1! cursor-pointer! flex justify-center py-2 bg-slate-700 rounded-sm text-emerald-300"><input class="text-center  cursor-pointer!" type="text" value="${password}" id="${password}" disabled/><i class="fa-solid fa-copy"></i></button>
+          <button onclick="copyToClipboard('${password}')" class="w-full m-1! cursor-pointer! flex justify-center py-2 bg-slate-700 hover:bg-slate-600 rounded-sm text-emerald-300"><input class="text-center  cursor-pointer!" type="text" value="${password}" id="${password}" disabled/><i class="fa-solid fa-copy"></i></button>
         </div>
        ` 
     });
