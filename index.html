@@ -1,0 +1,36 @@
+<html class="bg-slate-800">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="bg-slate-800! text-white m-10!">
+            <h1 class="mb-0! font-bold">Generate a <br/><span class="text-emerald-400">random password</span></h1>
+            <p class="m-0 text-slate-300">Never use an insecure password again!</p>
+            <br />
+            <form>
+            <p class="m-0 text-sm text-emerald-300 underline">Additional Options<i class="fa-solid fa-chevron-down"></i></p>
+                <div class="flex bg-slate-700 rounded-sm p-2 gap-2">
+                    <div class="basis-1/2 flex gap-1 flex-col">
+                        <label class="mb-px" for="passwordLength">Password Length</label>
+                        <input class="border border-emerald-300 rounded-sm p-2" type="number" id="passwordLength" value="15"/>
+                    </div>
+                    <div class="basis-1/2 flex flex-col gap-3">
+                        <div class="basis-1/2 flex justify-center items-center gap-2">
+                            <input type="checkbox" name="numbersAllowed" value="allowNumbers" checked id="allowNumbers">
+                            <label class="mt-1" for="allowNumbers">Allow Numbers</label>
+                        </div>
+                        <div class="basis-1/2 flex justify-center items-center gap-2">
+                        <input type="checkbox" name="allowSymbols" value="allowSymbols" checked id="allowSymbols">
+                        <label class="mt-1" for="allowSymbols">Allow Symbols</label>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="generatePasswords()" class="bg-emerald-500 my-5! p-3 rounded-md" type="button">Generate Passwords</button>
+            </form>
+            <hr />
+            <div id="generatedPassword" class="flex flex-wrap mt-5">
+            </div>
+        <script src="index.js"></script>
+    </body>
+</html>
